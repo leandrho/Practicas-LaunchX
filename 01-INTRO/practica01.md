@@ -25,7 +25,12 @@ Debe ser capaz de:
 ## **Publico Objetivo**
 ![Publico objetivo](./assets/publicoobjetivo.png "Publico Objetivo")
 
-## **Wireframes**
+## **Wireframes UX**
 [Wireframe Cliente](./assets/wireframe-cliente.pdf)
 
 [Wireframe Administrador](./assets/wireframe-admin.pdf)
+
+## **UI**
+[Diseño Cliente](./assets/ui-cliente.pdf)
+
+[Diseño Administrador](./assets/ui-admin.pdf)
