@@ -5,18 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastería Marx</title>
-    
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #main-header{
+            text-align: center;
+        }
+        dl{
+            margin: 1rem;
+        }
+
+        #navi {
+            text-align: center;
+        }
+        #navi li{
+            display: inline;
+            padding-left: 1rem;
+            padding-right: 2rem;
+        }
+        footer{
+            text-align: center;
+            margin: 5rem;
+            font-size: 0.9rem;
+        }
+        footer p{
+            text-align: center;
+            margin: 0rem;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-
+    <header id="main-header">
+        <img src="./img/marx-logo1.png" alt="mark-logo" width="350rem" height="350rem"/>
     </header>
-    <nav></nav>
+    <nav id="navi">
+        <ul>
+            <li><a href="#sabores">Sabores</a></li>
+            <li><a href="#adornos">Adornos</a></li>
+            <li><a href="#pedidos">Pedidos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="./pastelero.html" target="_blank">Admin</a></li>
+        </ul>
+    </nav>
     <main>
+        <section id="sabores">
+            <h2><b>Sabores</b></h2>
+            <dl>
+                <dt><b>Chocolate</b></dt>
+                <dd>Relleno de dulce de leche y duraznos con crema</dd>
+                <dt><b>Frutilla</b></dt>
+                <dd>Relleno de Dulce de Leche, crema chantilly y galletitas oreos</dd>
+                <dt><b>Crema</b></dt>
+                <dd>Relleno con nuez, dulce de leche natural y merengue italiano</dd>
+            </dl>
+        </section>
+        <section id="adornos">
+            <h2><b>Adornos</b></h2>
+            <dl>
+                <dt><b>Poliestileno</b></dt>
+                <dd>La figura y el tamaño que necesites(color blanco)</dd>
+                <dt><b>Etilvinilacetato</b></dt>
+                <dd>La figura, el tamaño y el color que necesites(espesor 4mm)</dd>
+                <dt><b>Porcelana Fria</b></dt>
+                <dd>La figura, el tamaño y el color que necesites</dd>
+            </dl>
+        </section>
+        <br/>
+        <section id="pedidos">
+            <h2>Pedidos</h2>
+            <div id="combinar-sabores">
+                <h3><b>Elija los sabores</b></h3>
+                <label for="sab-chocolate">Chocolate</label>
+                <input id="sab-chocolate" type="checkbox" name="Chocolate" form="form-pedido"/>
+                <label for="sab-frutilla">Frutilla</label>
+                <input id="sab-frutilla" type="checkbox" name="Frutilla" form="form-pedido"/>
+                <label for="sab-crema">Crema</label>
+                <input id="sab-crema" type="checkbox" name="Crema" form="form-pedido"/>
+            </div>
+            <div id="combinar-adornos">
+                <h3><b>Elija los adornos</b></h3>
+                <label for="ador-poli">Poliestileno</label>
+                <input id="ador-poli" type="checkbox" name="Poliestileno" form="form-pedido"/>
+                <label for="ador-eti">Etilvinilacetato</label>
+                <input id="ador-eti" type="checkbox" name="Etilvinilacetato" form="form-pedido"/>
+                <label for="ador-porc">Porcelana Fria</label>
+                <input id="ador-porc" type="checkbox" name="PorcelanaFria" form="form-pedido"/>
+            </div>
+            <div id="pedido-formbox">
+                <h3>Ingrese sus datos para completar su pedido</h3>
+                <form id="form-pedido" action="/">
+                    <label for="form-nbre">Nombre</label>
+                    <input id="form-nbre" type="text" name="nombre"/>
+                    <br/>
+                    <label for="form-tel">Telefono</label>
+                    <input id="form-tel" type="number" name="telefono"/>
+                    <br/>
+                    <label for="form-mail">Correo Electronico</label>
+                    <input id="form-mail" type="email" name="mail"/>
+                    <br/>
+                    <label for="form-descrip">Descripción</label><br>
+                    <textarea id="form-descrip" type="text" name="descripcion" cols="30" rows="10"></textarea>
+                    <br>
+                    <button type="submit">Finalizar</button>
+                </form>
+            </div>
+        </section>
+        <section id="contacto">
 
+        </section>
     </main>
     <footer>
-
+        <p>Avenida America 2201 Este | SL-USA</p>
+        <p>Telefono: +84-22319-123123</p>
+        <p>Horarios de Atención: L-V 15:00hs 15:30hs</p>
     </footer>
 </body>
 </html>
