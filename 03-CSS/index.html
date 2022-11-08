@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+</head>
+<body>
+    <header class="container-row">
+        <h1 id="titulo">Vaccination</h1>
+        <nav id="menu">
+            <ul id="menu-list">
+               <li id="m-db"><a class="nav-but-text" href="">Database</a></li>
+               <li id="m-edu"><a class="nav-but-text" href="">Education</a></li>
+               <li id="m-news"><a class="nav-but-text" href="">News</a></li>
+               <li id="m-reg"><a class="nav-but-text" href="">Regulation</a></li>
+               <li id="m-hoax" class="nav-but-blue"><button id="but-hoax">Hoax Buster</button></li>
+            </ul>
+        </nav> 
+    </header>
+    <main class="main">
+        <section id="inicio-section" class="ini-container">
+            <div class="init">
+                <div class="ini-title">
+                    <h1>Fight Virus <br> With Vaccines</h1>
+                    <p>Let's stop this pandemic by killing the virus</p><p> with a vaccine, don't let yourself and your </p><p>family get infected</p>
+                </div>
+                <div class="best-selected">
+                    <!-- <span class="material-symbols-outlined icon-yellow">verified_user</span> -->
+                    
+                    <p><i class="fa-solid fa-shield icon-yellow fa-1x"></i>Best protection</p>
+                    <p><i class="fa-solid fa-star icon-yellow fa-1x"></i>Selected Vacciones</p>
+                </div>
+            </div>
+            <div class="ini-form">
+                <h2><i class="fa-solid fa-clock icon-blue"></i>Schedule your vaccinations</h2>
+                <div class="ini-form-cont">
+                    <form action="" method="post">
+                        <div class="ini-form-input-sel">
+                            <label for="location"><i class="fa-solid fa-location-dot icon-blue"></i>Location</label><br>
+                            <select name="location" id="location">
+                                <option value="Jakarta Utara">Jakarta Utara</option>
+                            </select>
+                        </div>
+                        <div class="ini-form-input-sel">
+                            <label for="date"><i class="fa-solid fa-calendar icon-blue"></i>Date</label><br>
+                            <input name="date" id="date" type="date"/> <!--agregar fecha actual from js-->
+                        </div>
+                        <div class="ini-form-input-sel">
+                            <label for="vaccine-type"><i class="fa-solid fa-syringe icon-blue"></i>Vaccine Type</label><br>
+                            <select name="vaccine-type" id="vaccine-type">
+                                <option value="Aztrazeneca">AztraZeneca</option>
+                                <option value="Sinovac">SinoVac</option>
+                                <option value="Pfizer">Pfizer</option>
+                                <option value="Moderna" selected>Moderna</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="but-sub">Submint</button>
+                    </form>
+                </div>
+            </div> 
+        </section>
+        <section class="why-section">
+            <div class="marcas-img-container">
+                <img src="./img/astrazeneca_logo2.svg" alt="astrazeneca">
+                <img src="./img/Sinovac_logo.svg" alt="sinovac">
+                <img src="./img/Pfizer_(2021).svg" alt="pfizer">
+                <img src="./img/Moderna_logo.svg" alt="moderna">
+            </div>
+            <h2>Why should I vaccine?</h2>
+            <p>In order to avoid any doubts about getting the COVID-19</p><p>vaccine, identify the following 4 benefits of COVID-19 </p><p>vaccination :</p>
+            <div class="cards-container">
+                <div class="card">
+                    <i class="fa-solid fa-sliders icon-blue"></i>
+                    <h3>Minimize the<br>spread of viruses</h3>
+                    <p class="">Vaccine has been proven</p>
+                    <p class="">effective to prevent someone</p>
+                    <p class="">from gettin infected with</p>
+                    <p class="">Coronavirus</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-shield icon-blue"></i>
+                    <h3>Forming<br>antibodies</h3>
+                    <p class="">COVID-19 vaccine proven to</p>
+                    <p class="">help shape antibody</p>
+                    <p class="">response for immune system</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users icon-blue"></i>
+                    <h3>Protecting<br>people nearby</h3>
+                    <p class="">The benefits of COVID-19</p>
+                    <p class="">vaccination are the vaccine</p>
+                    <p class="">that we get can also help</p>
+                    <p class="">protect people around us</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-chart-line icon-blue"></i>
+                    <h3>Creation group<br>immunity</h3>
+                    <p class="">COVID-19 vaccination is also</p>
+                    <p class="">beneficial for creating group</p>
+                    <p class="">immunity or head immunity</p>
+                </div>
+            </div>
+        </section>
+        <section class="preparation-section">
+            <div class="prep-whole">
+                <div class="prep-container">
+                    <h2>Preparation Before Vaccine</h2>
+                    <p>The success of vaccines is strongly influenced by the</p>
+                    <p>strength of the body's immune system. Therefore, there are</p>
+                    <p>several things that can be tried to make the COVID-19</p>
+                    <p>vaccine work:</p>
+                </div>
+                <div class="prep-list">
+                    <ul class="prep-ul">
+                        <li class="prep-li boxshadow">
+                            <div class="una">
+                                <i class="fa-solid fa-shield-virus icon-blue"></i>
+                                <p>Avoid alcoholic beverages</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down icon-blue up-down"></i>
+                        </li>
+                        <li class="prep-lis boxshadow">
+                            <div class="prep-li">
+                                <div class="una">
+                                    <i class="fa-solid fa-square-xmark icon-blue"></i>
+                                    <p>Avoid stress</p>
+                                </div>
+                                <i class="fa-solid fa-caret-up icon-blue up-down"></i>
+                            </div>
+                            <div class="prep-li-text">
+                                <p>Stress has profound effect on immune work.</p>
+                                <p>Moreover, prolonged stress can increase cortisol</p>
+                                <p>production and oxidative stress in the body.</p>
+                            </div>
+                        </li>
+                        <li class="prep-li boxshadow">
+                            <div class="una">
+                                <i class="fa-solid fa-square-poll-vertical icon-blue"></i>
+                                <p>Eat healthy food</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down icon-blue up-down"></i>
+                        </li>
+                        <li class="prep-li boxshadow">
+                            <div class="una">
+                                <i class="fa-solid fa-square-check icon-blue"></i>
+                                <p>Get enough sleep</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down icon-blue up-down"></i>
+                        </li>
+                        <li class="prep-li boxshadow">
+                            <div class="una">
+                                <i class="fa-solid fa-heart icon-blue"></i>
+                                <p>Exercise or physical activity</p>
+                            </div>
+                            <i class="fa-solid fa-caret-down icon-blue up-down"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="emergency-section">
+            <div class="eme-container">
+                <h2>Emergency Contact</h2>
+                <p>Contact one of the contacts below if you or your family fell</p>
+                <p>unwell and have similar symptoms such as Covid-19, make</p>
+                <p>sure you also take care of yourself before reporting to us:</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="sub-foo">
+            <div class="foo-vac">
+                <h3>Vaccionation</h3>
+                <p>Our goal is to help the</p>
+                <p>world free from the</p>
+                <p>ongoing pandemic</p>
+            </div>
+            <div class="cards2">
+                <div class="card2">
+                    <h3>About</h3>
+                    <p>About Us</p>
+                    <p>Features</p>
+                    <p>News & Blog</p>
+                </div>
+                <div class="card2">
+                    <h3>Company</h3>
+                    <p>How We Work?</p>
+                    <p>Capital</p>
+                    <p>Security</p>
+                </div>
+                <div class="card2">
+                    <h3>Support</h3>
+                    <p>FAQs</p>
+                    <p>Support Center</p>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+        </div>
+        <div class="end-line">
+            <p>@2022 Vaccination. All rights reserved</p>
+            <div class="end">
+                <p>Terms & Agreements</p>
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

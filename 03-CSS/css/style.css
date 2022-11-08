@@ -1,0 +1,156 @@
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: Poppins-Reg;
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: Poppins-Semi;
+    src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+    font-family: Poppins-Medi;
+    src: url("../fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: Monserrat-Bold;
+    src: url("../fonts/Monserrat/static/Montserrat-Bold.ttf");
+}
+@font-face {
+    font-family: Monserrat-Regular;
+    src: url("../fonts/Monserrat/static/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: Monserrat-Semibold;
+    src: url("../fonts/Monserrat/static/Montserrat-SemiBold.ttf");
+}
+*{
+    font-family: Poppins-Reg, Arial;
+}
+.container-row{
+    margin: 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right,#fff 49%, #e7f3fc 50%);
+    background-position: center;
+}
+#titulo{
+    /* align-items: center; */
+    padding-left: 10rem;
+    font-size: 1.7rem;
+    font-family: Monserrat-Bold;
+    color: #3555d3;
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
+}
+.nav-but-text{
+    color: #6d7b93;
+}
+
+#menu-list {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#menu-list li{
+    list-style-type: none;
+    padding-right: 2rem;
+    align-self: center;
+   
+}
+
+#menu-list a{
+    font-size: 1rem;
+    font-family: Poppins-Semi;
+}
+#menu{
+  
+    
+     align-content: center;
+     padding-right: 2rem;
+   
+}
+#but-hoax{
+    font-family: Poppins-Semi;
+    font-size: 1rem;
+    color: white;
+    background-color: #2949c7;
+    border-color: #2949c7;
+    border-radius: 5px;
+    width: 9rem;
+    height: 3rem;
+}
+/*
+ nav{
+    
+    background-color: blue;
+}
+
+ul{
+    background-color: green;
+}
+header{
+    background-color: gray;
+}
+h1{
+    background-color: blueviolet;
+}
+li{
+    background-color: orange;
+}
+a{
+    background-color: red;
+} */
+.container{
+    display: flex;
+    background-color: lightgray;
+    height: 60vh;
+    width: 98vw;
+    justify-content: center;
+    flex-flow: row wrap;
+     /* align-items: center; */
+    align-content: center;  
+
+}
+.one{
+    background-color: green;
+    height: 6rem;
+    width: 6rem; 
+    align-self: flex-start;
+    flex-grow: 2;
+      
+/* flex: 1 1 6rem; */
+}
+.two{
+    background-color: red;
+    height: 6rem;
+    width: 6rem;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+.three{
+    background-color: blue;
+    height: 6rem;
+    width: 6rem;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+.four{
+    background-color: orange;
+    height: 6rem;
+    width: 6rem;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+.pe{
+    margin: 10px;
+}
