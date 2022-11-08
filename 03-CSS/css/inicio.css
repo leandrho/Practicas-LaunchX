@@ -1,4 +1,6 @@
-
+p{
+    margin: 5px;
+}
 .ini-title > h1{
     font-family: Monserrat-Bold;
     font-size: 4rem;
@@ -178,14 +180,14 @@
 }
 .card > h3{
    color:#1f3e72;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    font-family: Monserrat-Regular;
 
 }
 .card > p{
     color:#6d7b93;
-    font-family: Poppins-Semi;
-    font-size: 0.9rem;
+    font-family: Poppins-Medi;
+    font-size: 0.8rem;
 }
 .preparation-section{
     margin-top: 5rem;
