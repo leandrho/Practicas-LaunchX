@@ -166,8 +166,9 @@ p{
     margin-top: 5rem;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 5rem;
+    gap:1rem;
 }
 .card{
     padding: 1rem;
