@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokedex</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="pokedex"> 
@@ -16,31 +16,172 @@
         <div class="caja c5">Caja5</div>
         <div class="caja c6">Caja6</div>
     </div> -->
-    <div class="lside">
-        <header class="lside-header">
-            <div class="bola big blue boxshadow"></div>
-            <div class="lineabolas">
-                <div class="bola red boxshadow"></div>
-                <div class="bola yellow boxshadow"></div>
-                <div class="bola yellow boxshadow"></div>
-            </div>
-        </header>
-        <section class="lside-main"> 
-                <div id="screen">
-                    <img id="pokemon" class=""></img>
+    <div class="poke">
+        <div class="lside">
+            <header class="lside-header">
+                <div class="bola big blue boxshadow"></div>
+                <div class="lineabolas">
+                    <div class="bola red boxshadow"></div>
+                    <div class="bola yellow boxshadow"></div>
+                    <div class="bola yellow boxshadow"></div>
                 </div>
-        </section>
-        <section class="lside-controls">
-            <div id="but-circle"></div>
-            <div id="grion1" class="guion darkred"></div>
-            <div id="grion2" class="guion bluegreen"></div>
-            <div id="cruz" class="cruz-circle">
-                <div id="but-cruz"></div>
+            </header>
+            <section class="lside-main"> 
+                    <div id="screen">
+                        <img id="pokemon" class=""></img>
+                    </div>
+            </section>
+            <section class="lside-controls">
+                <div id="but-circle"></div>
+                <div id="grion1" class="guion darkred"></div>
+                <div id="grion2" class="guion bluegreen"></div>
+                <div id="cruz" class="cruz-circle">
+                    <div id="but-cruz"></div>
+                </div>
+                
+                <input id="input-text" class="input-green" type="text" placeholder="Insert name or number id">
+                <button id="but-search" class="but-search" type="button" name="search" onclick="fetchPokemon()">Search</button>
+            </section>
+        </div>
+        <div class="rside">
+            <div id="name" class="">
+                <p id="pname"></p>
+            </div>
+            <div class="stats-container">
+                <div class="tifra">
+                    <p class="pepe">TIPO: <span id="tipo" class="sp"></span></p>
+                    <p>HABILIDAD: <span id="fraqueza" class="sp"></span></p>
+                </div>
+                <div class="stat-box">
+                    <div class="item">
+                        <div id="psbars" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">PS</p>
+                    </div>
+                    <div class="item">
+                        <div id="atkbars" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">ATK</p>
+                    </div>
+                    <div class="item">
+                        <div id="defbars" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">DEF</p>
+                    </div>
+                    <div class="item">
+                        <div id="spatkbars" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">SP.ATK</p>
+                    </div>
+                    <div class="item">
+                        <div id="spdef" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">SP.DEF</p>
+                    </div>
+                    <div class="item">
+                        <div id="speed" class="bars">
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar white"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                            <div class="bar cele"></div>
+                        </div>
+                        <p class="fostat">SPEED</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-buttons-blue">
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+                <div class="celbox"></div>
+            </div>
+            <div class="guiones">
+                <div class="guion black">
+                </div>
+                <div class="guion black">
+                </div>
+            </div>
+            <div class="pri">
+                <div class="pri2">
+                    <div class="whitebox"></div>
+                    <div class="whitebox"></div>
+                </div>
+                <div id="bol" class="bola yellow"></div>
             </div>
             
-            <input id="input-text" class="input-green" type="text" placeholder="Insert name or number id">
-            <button id="but-search" class="but-search" type="button" name="search" onclick="fetchPokemon()">Search</button>
-        </section>
+            <div class="fo">
+                <div id="altura" class="blackbox"><p>Altura: <span id="idaltura" class="sp"></span></p></div>
+                <div id="peso" class="blackbox"><p>Peso: <span id="idpeso" class="sp"></span></p></div>
+            </div> 
+        </div>
     </div> 
     <script src="./js/scripts.js"></script>
 </body>
