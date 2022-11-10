@@ -10,6 +10,25 @@ const fetchPokemon = () => {
             setName("");
             setAltura("");
             setPeso("");
+            const pname=document.getElementById("tipo");
+            pname.innerHTML="";
+            const p2name=document.getElementById("fraqueza");
+            p2name.innerHTML="";
+            const i1=document.getElementById("img1");
+            const i2=document.getElementById("img2");
+            const i3=document.getElementById("img3");
+            const i4=document.getElementById("img4");
+            const i5=document.getElementById("img5");
+            const i6=document.getElementById("img6");
+            const i7=document.getElementById("img7");
+            i1.src="";
+            i2.src="";
+            i3.src="";
+            i4.src="";
+            i5.src="";
+            i6.src="";
+            i7.src="";
+            
         }
         else {
             return res.json();
@@ -23,6 +42,7 @@ const fetchPokemon = () => {
             ti=data.types;
             fra=data.abilities;
             // setStats(data.stat);
+            setSprites(pokeImg,data.sprites);
             setTipoFraqueza(ti,fra);
             setName("#"+data.id+" "+name);
             setAltura(data.height);
@@ -31,6 +51,29 @@ const fetchPokemon = () => {
             console.log(pokeImg);
         }
     });
+}
+const setSprites= (m,spri) => {
+    let backdef=spri.back_default;
+    let backshi=spri.back_shiny;
+    let frontdef=spri.front_default;
+    let frontshi=spri.front_shiny;
+    let homefrontdef=spri.other.home.front_default;
+    let dreamfrontdef=spri.other.dream_world.front_default;
+    const i1=document.getElementById("img1");
+    const i2=document.getElementById("img2");
+    const i3=document.getElementById("img3");
+    const i4=document.getElementById("img4");
+    const i5=document.getElementById("img5");
+    const i6=document.getElementById("img6");
+    const i7=document.getElementById("img7");
+    i1.src=backdef;
+    i2.src=backshi;
+    i3.src=frontdef;
+    i4.src=frontshi;
+    i5.src=homefrontdef;
+    i6.src=dreamfrontdef;
+    i7.src=m;
+
 }
 const setStats= (stat) =>{
     stat.forEach(el => {
@@ -43,29 +86,38 @@ const setName = (name) => {
     pname.innerHTML=name;
 }
 const setAltura = (alt) => {
-    console.log("Altura: "+alt);
+    console.log("Altura: "+alt+"M");
     const pname=document.getElementById("idaltura");
-    pname.innerHTML=alt;
+    pname.innerHTML=alt+"m";
 }
 const setTipoFraqueza = (t,f) => {
     console.log("Tipo Fraqueza: "+t);
     let ti="";
     t.forEach(el => {
-        ti+=" "+el.type.name;
+        ti+='<span class="sp spblue"  style="margin-right: 2px">'+el.type.name+"</span>";
     });
     const pname=document.getElementById("tipo");
     pname.innerHTML=ti;
     let val="";
+    let bol=true;
     f.forEach(el => {
-        val+=" "+el.ability.name;
+        if(bol)
+        {
+            val+='<span class="sp spgreen" style="margin-right: 2px">'+el.ability.name+"</span>";
+            bol=false;
+        }
+        else {
+            val+='<span class="sp spyellow" style="margin-right: 2px">'+el.ability.name+"</span>";
+            bol=true;
+        }
     });
     const p2name=document.getElementById("fraqueza");
     p2name.innerHTML=val;
 }
 const setPeso = (alt) => {
-    console.log("Peso: "+alt);
+    console.log("Peso: "+alt+"KG");
     const pname=document.getElementById("idpeso");
-    pname.innerHTML=alt;
+    pname.innerHTML=alt+"kg";
 }
 const pokeImage = (url) => {
     const pokePhoto = document.getElementById("pokemon");
@@ -80,3 +132,7 @@ input.addEventListener("keypress", function(event) {
     fetchPokemon();
   }
 });
+
+function changeImg(dato){
+    pokeImage(dato);
+}
