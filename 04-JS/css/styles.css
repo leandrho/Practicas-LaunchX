@@ -27,7 +27,7 @@ p{
 .lside{
     display: grid;
     
-    width: 440px;
+    width: 410px;
     height: 700px;
     /* margin: 0 auto; */
     background-color: #ce1131;
@@ -38,6 +38,8 @@ p{
     "main     main     main" 55%
     "controls controls controls" 30% /
     100%; 
+    justify-content: center;
+    align-items: center;
 }
 .lside-header{
     margin: 15px;
@@ -58,11 +60,12 @@ p{
     margin-bottom: 20px;
     margin-top: 10px;
     box-shadow: -4px 4px 0px 4px #6a6b6f;
+    height: 70%;
     
 }
 #screen{
     width: 80%;
-    height: 65%;
+    height: 80%; 
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -70,6 +73,8 @@ p{
     border-radius: 15px;
     padding: 5px;
     box-shadow: 1px -1px 0px 1px #44444477;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 .im{
     width: 100%;
@@ -177,7 +182,6 @@ p{
     box-shadow: -4px 4px 0px 4px #000;
 }
 .lside-controls{
-    margin-top: 30px;
     margin-left: 40px;
 
     grid-area: controls;
@@ -348,6 +352,7 @@ background-color: #444444;
     height: 35%;
     background-color: #222222;
     border-radius: 10px;
+    font-size: 12px;
 }
 .fo{
     width: 90%;
@@ -387,9 +392,27 @@ background-color: #444444;
     
 }
 @media (max-width: 600px) {
+    .poke{
+        width: 400px;
+    }
+    .lside-main{
+        width: 80%;
+        height: 85%;
+        margin-top: 10px;
+        /* margin-left: 30px; */
+        
+    }
+    .lside{
+        width: 100%;
+    }
     .rside{
-        width: 440px;
-        height: 600px;
+        width: 100%;
+    }
+    .blackbox{
+        width: 45%;
+        height: 40%;
+        line-height: 25px;
+        font-size: 12px;
     }
 }
 /* .grid-layout{
